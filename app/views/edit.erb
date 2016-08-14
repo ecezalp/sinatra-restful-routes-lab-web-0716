@@ -1,0 +1,15 @@
+<p><%=@to_be_edited.name %></p>
+<p><%=@to_be_edited.ingredients %></p> 
+<p><%=@to_be_edited.cook_time %></p> 
+
+<form method="post" action="/recipes/<%=@to_be_edited.id%>">
+<input id="hidden" type="hidden" name="_method" value="patch">
+
+<p> Edit Name: <input id="recipe_name" input type="text" name="name"/> </p>
+
+<p> Edit Ingredients: <input id="recipe_ingredients" input type="text" name="ingredients"/> </p>
+
+<p> Edit Cook Time: <input id="recipe_cook_time" input type="text" name="cook_time"/> </p>
+
+<input type="submit" id="submit" value="Submit"/>
+</form>
